@@ -9,7 +9,7 @@ import cors from "cors";
 import path from "path";
 import { app, server } from "./lib/socket.js";
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 const __dirname = path.resolve();
 
 app.use(express.json({ limit: "10mb" })); // Adjust the size as needed
@@ -23,7 +23,7 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => res.status(200).send("Server is running"));
+
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
