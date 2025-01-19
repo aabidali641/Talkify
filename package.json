@@ -1,13 +1,22 @@
 {
-  "name": "chat-app",
+  "name": "talkify",
   "version": "1.0.0",
-  "description": "",
+  "description": "talkify",
   "main": "index.js",
   "scripts": {
-    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "npm run start --prefix backend"
+    "build" : "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start" : "npm run start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aabidali641/Talkify.git"
   },
   "keywords": [],
-  "author": "Aabid Ali",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aabidali641/Talkify/issues"
+  },
+  "homepage": "https://github.com/aabidali641/Talkify#readme"
 }
