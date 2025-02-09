@@ -16,7 +16,7 @@ export const useChatStore = create((set, get) => ({
       const res = await axiosInstance.get("/messages/users");
       set({ users: res.data });
     } catch (error) {
-      toast.error(error?.response?.data?.message || "Failed to fetch users.");
+      toast.error(error.response.data.message);
     } finally {
       set({ isUsersLoading: false });
     }
@@ -28,20 +28,13 @@ export const useChatStore = create((set, get) => ({
       const res = await axiosInstance.get(`/messages/${userId}`);
       set({ messages: res.data });
     } catch (error) {
-      toast.error(
-        error?.response?.data?.message || "Failed to fetch messages."
-      );
+      toast.error(error.response.data.message);
     } finally {
       set({ isMessagesLoading: false });
     }
   },
-
   sendMessage: async (messageData) => {
     const { selectedUser, messages } = get();
-    if (!selectedUser) {
-      toast.error("No user selected for sending messages.");
-      return;
-    }
     try {
       const res = await axiosInstance.post(
         `/messages/send/${selectedUser._id}`,
@@ -49,7 +42,7 @@ export const useChatStore = create((set, get) => ({
       );
       set({ messages: [...messages, res.data] });
     } catch (error) {
-      toast.error(error?.response?.data?.message || "Failed to send message.");
+      toast.error(error.response.data.message);
     }
   },
 
@@ -60,9 +53,9 @@ export const useChatStore = create((set, get) => ({
     const socket = useAuthStore.getState().socket;
 
     socket.on("newMessage", (newMessage) => {
-      const isMessageFromSelectedUser =
+      const isMessageSentFromSelectedUser =
         newMessage.senderId === selectedUser._id;
-      if (!isMessageFromSelectedUser) return;
+      if (!isMessageSentFromSelectedUser) return;
 
       set({
         messages: [...get().messages, newMessage],
