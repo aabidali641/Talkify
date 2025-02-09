@@ -57,7 +57,7 @@ export const login = async (req, res) => {
 
     const isPasswordCorrect = await bcrypt.compare(password, user.password);
     if (!isPasswordCorrect) {
-      return res.status(400).json({ message: "Invalid Email or Password" });
+      return res.status(400).json({ message: "Password Must Be Greater Than 6 Character" });
     }
 
     generateToken(user._id, res);
