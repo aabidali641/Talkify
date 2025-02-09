@@ -5,22 +5,38 @@
 📂 Repository: [GitHub - Talkify](https://github.com/aabidali641/Talkify)
 
 🌟 Features
+
 ✅ Real-Time Messaging: Powered by WebSockets, ensuring instant message delivery.
+
 🔒 Secure Authentication: Utilizes JWT, Passport.js, and bcrypt for user login and security.
+
 🖼️ Media Uploads: Integrated with Cloudinary for seamless image and media storage.
+
 💡 Efficient State Management: Uses Zustand for better performance and scalability.
+
 🎨 Modern UI Design: Built with DaisyUI and Tailwind CSS for an elegant and responsive interface.
+
 📱 Mobile-Friendly: Fully responsive design for all screen sizes.
+
 🛠️ Follows MVC Architecture: Ensures scalability and maintainability of the codebase.
 
+
 🏗 Tech Stack Used
+
 🟢 Frontend: React.js, Tailwind CSS, DaisyUI
+
 🟡 Backend: Node.js, Express.js
+
 🛢 Database: MongoDB
+
 ⚡ Real-Time Communication: Socket.io
+
 🔑 Authentication: JWT
+
 📂 Storage: Cloudinary
+
 🌐 State Management: Zustand
+
 
 🚀 Getting Started
 
