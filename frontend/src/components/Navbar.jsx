@@ -22,9 +22,9 @@ const Navbar = () => {
               </div>
               <div className="flex items-center">
                 <span className="px-2 py-1 bg-primary rounded-lg text-white text-lg font-bold">
-                  Tal
+                  Talk
                 </span>
-                <h1 className="text-lg font-bold">kify</h1>
+                <h1 className="text-lg font-bold">ify</h1>
               </div>
             </Link>
           </div>
