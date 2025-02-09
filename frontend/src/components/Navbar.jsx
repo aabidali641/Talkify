@@ -25,6 +25,7 @@ const Navbar = () => {
                   Talk
                 </span>
                 <h1 className="text-lg font-bold">ify</h1>
+              
               </div>
             </Link>
           </div>
